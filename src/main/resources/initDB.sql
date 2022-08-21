@@ -57,9 +57,9 @@ create table projects
 	customer_id INT,
 	company_id INT,
 	FOREIGN KEY (customer_id)
-        REFERENCES customers (customer_id),
+        REFERENCES customers,
 	FOREIGN KEY (company_id)
-        REFERENCES companies (company_id)
+        REFERENCES companies
 );
 
 alter table projects owner to postgres;
