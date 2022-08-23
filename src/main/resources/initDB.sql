@@ -63,3 +63,30 @@ create table projects
 );
 
 alter table projects owner to postgres;
+
+//Revision 2 changes
+ALTER TABLE skills DROP COLUMN developer_id;
+
+create table developers_skills
+(
+	skill_id INT,
+	developer_id INT,
+	FOREIGN KEY (developer_id)
+        REFERENCES developers,
+	FOREIGN KEY (skill_id)
+        REFERENCES skills
+);
+
+alter table developers_skills owner to postgres;
+
+create table developers_per_projects
+(
+	project_id INT,
+	developer_id INT,
+	FOREIGN KEY (developer_id)
+        REFERENCES developers,
+	FOREIGN KEY (project_id)
+        REFERENCES projects
+);
+
+alter table developers_per_projects owner to postgres;

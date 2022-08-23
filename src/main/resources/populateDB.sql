@@ -34,3 +34,38 @@ INSERT INTO public.projects (project_id, name, customer_id, company_id) VALUES (
 INSERT INTO public.projects (project_id, name, customer_id, company_id) VALUES (4, 'Web Market', 2, 1);
 INSERT INTO public.projects (project_id, name, customer_id, company_id) VALUES (5, 'Viber', 3, 2);
 INSERT INTO public.projects (project_id, name, customer_id, company_id) VALUES (6, 'Online Payments', 3, 3);
+
+//Revision 2 changes
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (1, 2);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (2, 7);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (3, 1);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (4, 4);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (5, 8);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (6, 5);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (7, 6);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (8, 5);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (9, 8);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (10, 3);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (11, 1);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (12, 7);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (10, 2);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (5, 3);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (8, 4);
+INSERT INTO public.developers_skills (skill_id, developer_id) VALUES (2, 6);
+
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (1, 1);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (1, 2);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (4, 1);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (4, 2);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (4, 3);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (1, 3);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (2, 4);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (2, 5);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (5, 4);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (5, 5);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (3, 6);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (3, 7);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (3, 8);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (6, 6);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (6, 7);
+INSERT INTO public.developers_per_projects (project_id, developer_id) VALUES (6, 8);
