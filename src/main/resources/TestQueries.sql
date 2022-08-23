@@ -1,22 +1,28 @@
 // один разработчик имеет много проектов
-SELECT p.name as project, d.last_name as developer
-FROM developers d
-JOIN companies c ON c.company_id = d.company_id
-JOIN projects p ON p.company_id = c.company_id
-WHERE d.developer_id = 2;
+SELECT d.last_name, p.name
+FROM developers_per_projects dp
+JOIN projects p on dp.project_id = p.project_id
+JOIN developers d on dp.developer_id = d.developer_id
+ORDER BY 1;
 
 // разработчики могут иметь много навыков
-SELECT d.last_name as developer, s.name as skill
-FROM developers d
-JOIN skills s ON s.developer_id = d.developer_id
-WHERE d.developer_id = 1;
+SELECT s.skill_id, d.last_name
+FROM developers_skills ds
+JOIN skills s ON s.skill_id = ds.skill_id
+JOIN developers d ON d.developer_id = ds.developer_id
+ORDER BY 1;
+
+SELECT d.last_name, s.name, s.skill_level
+FROM developers_skills ds
+JOIN skills s ON s.skill_id = ds.skill_id
+JOIN developers d ON d.developer_id = ds.developer_id;
 
 // каждый проект имеет много разработчиков
-SELECT p.name as project, d.last_name as developer
-FROM projects p
-JOIN companies c ON c.company_id = p.company_id
-JOIN developers d ON d.company_id = c.company_id
-WHERE p.project_id = 6;
+SELECT p.name, d.last_name
+FROM developers_per_projects dp
+JOIN projects p on dp.project_id = p.project_id
+JOIN developers d on dp.developer_id = d.developer_id
+ORDER BY 1;
 
 // компании выполняют много проектов одновременно
 SELECT c.name as company, p.name as project
